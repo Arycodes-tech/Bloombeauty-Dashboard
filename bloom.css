@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 230px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #f8d7da, #f5c6cb);
+    color: #4a2c2a;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #4a2c2a;
+}
+.menu {
+    list-style: none;
+}
+.menu li {
+    margin: 8px 0;
+    padding: 12px 14px;
+    cursor: pointer;
+    color: #6e4b4b;
+    transition: all 0.3s ease;
+}
+.menu li i {
+    margin-right: 10px;
+}
+.menu li:hover {
+    color: #2d2d2d;
+    background: rgba(256, 255, 255, 0.4);
+    padding-left: 16px;
+    transform: translate(4px);
+}
+.menu li:active {
+    background: white;
+    font-weight: 600;
+    color: #d46a6a;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.bottom {
+    font-size: 14px;
+    color: #6e4b4b;
+    padding-top: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.bottom p {
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.bottom p i {
+    margin-right: 10px;
+}
+.bottom p:hover {
+    color: #2d2d2d;
+}
+
+.main {
+    flex: 1;
+    padding: 30px;
+    background: #ffffff;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 25px;
+    background: linear-gradient(135deg, #fff7f8, #fdeeee);
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    background: transparent ;
+    padding: 0;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: none;
+}
+.navbar span:first-child {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2d2d2d;
+}
+.navbar span:last-child {
+    font-size: 14px;
+    color: #a08a8a;
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: #ffffff;
+    border: 1px solid #f3dede;
+    box-shadow: 0 8px 25px rgba(224, 138, 138, 0.08);
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid #f1dede;
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-3px);
+}
+.card p {
+    font-size: 13px;
+    color: #9c8a8a;
+}
+.card h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #d46a6a;
+}
+h3.low-stock {
+    color: #0ba00bf8;
+}
+.card:hover {
+    transform: translateY(-5x);
+    box-shadow: 0 10px 25px rgb(224, 138, 138, 0.15);
+}
+
+
+.table-section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(224, 138, 138, 0.08);
+    border: 1px solid #f1dede;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    padding-bottom: 10px ;
+    text-align: left;
+    color: #2d2d2d;
+    padding-bottom: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+td {
+    padding: 16px 0;
+    border-top: 1px solid #f1dede;
+    font-size: 14px;
+    color: #8a8a8a;
+}
+tbody tr:hover {
+    background: #fff0f1;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        /* overflow-x: auto; */
+        /* align-items: center; */
+        padding: 15px;
+        gap: 15px;
+    }
+    .sidebar h2 {
+        text-align: center;
+    }
+    .menu {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+    }
+    .menu li {
+        margin: 0;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .bottom {
+        display: none;
+    }
+
+    .main {
+        padding: 15px;
+        gap: 15px;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+    .table-section {
+        overflow-x: auto;
+    }
+    table {
+        min-width: 500px;
+    }
+
+}
